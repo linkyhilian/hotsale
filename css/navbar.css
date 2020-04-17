@@ -1,0 +1,308 @@
+header {
+
+  background: rgba(255, 87, 81, 0.4);
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
+  transition:0.2s;
+}
+
+/* Internet Explorer */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  header {
+
+    background: rgba(255, 87, 81, 0.4);
+    position: fixed;
+    width: 100vw;
+    z-index: 10;
+  }
+  .simply-days-section .box::after{
+
+    display: none;
+  }
+  .simply-hours-section .box::after{
+
+    display: none;
+  }
+  .simply-minutes-section .box::after{
+
+    display: none;
+  }
+  .simply-seconds-section .box::after{
+
+    display: none;
+  }
+}
+.nav_container {
+  /* display flex */
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  /* align-items */
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  /* Propios */
+  width: 100%;
+  transition: 0.2s;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 8px 0;
+}
+
+.nav_container nav{
+  margin: 0;  
+  flex:1;
+  margin-left:120px ;
+  }
+.bars_icon{
+  display:none;
+}
+
+ul {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  /* justify-content */
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: flex-start;
+  justify-content: flex-start;
+  list-style-type: none;
+}
+
+.item a{
+  font-size: 20px;
+  line-height: 1.2;
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 30.6px;
+}
+
+.nav_logo_container{
+  padding-top:10px;
+
+}
+.logo_img{
+  width: 156px; 
+}
+/* Cuenta Regresiva */
+.container_cuentas{
+  order: 3;
+}
+.container_headnav{
+  width: 55px;
+  height: 55px;
+}
+ul{
+  padding-inline-start: 0px;
+
+}
+#cuenta{
+  display: flex;
+  justify-content: center;
+}
+.simply-section{
+  font-weight: bold;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.simply-amount{
+  background-color: white;
+  color:#ff0008;
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin-right: 11px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 12px;
+}
+.simply-word{
+  color:#ffffff;
+  font-weight: bold;
+  display: block;
+  font-size: 12px;
+  margin-left: 12px;
+}
+.container_ncuenta{
+  display: flex;
+  flex-direction: column;
+}
+.ntexto{
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color:#ffffff;
+  margin-left: 10px;
+}
+.container_ncuenta1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position:fixed;
+  top:56.99px;
+  background-color: rgba(255,87,81,0.4) ;
+  width: 100%;
+}
+
+.container_center{
+  display: flex;
+  flex-direction: column;
+}
+.ntexto1{
+  margin-bottom: 8.7px;
+  font-size: 14px;
+  color:#ffffff;
+  
+}
+
+#cuenta1{
+  display: flex; 
+  justify-content: center;
+}
+
+
+@media(max-width:768px) {
+  /* #cuenta, .ntexto{
+    display: none
+  } */
+}
+
+@media(min-width:768px) {
+  #cuenta1, .ntexto1, .container_ncuenta1{
+    display: none
+  }
+}
+
+.simply-word{
+  
+  font-weight: bold;
+  display: block;
+  font-size: 10px;
+  text-align: center;
+  margin:0;
+
+}
+
+.box{
+  margin-left: 11px;
+  max-width: 52px;
+  max-height: 82px;
+  text-align: center;
+}
+
+.simply-days-section .box::after{
+  content: ":";
+  color: white;
+  position: relative;
+  font-size: 18px;
+  top: -46.9px;
+  left: 29.7px;
+}
+.simply-hours-section .box::after{
+  content: ":";
+  color: white ;
+  position: relative;
+  top: -46.9px;
+  left: 29.7px;
+  font-size: 18px;
+}
+.simply-minutes-section .box::after{
+  content: ":";
+  color: white ;
+  position: relative;
+  top: -46.9px;
+  left: 29.7px;
+  font-size: 18px;
+}
+.simply-seconds-section .box::after{
+  content: ":";
+  color: white ;
+  position: relative;
+  top: -46.9px;
+  left: 16px;
+  font-size: 18px;
+}
+/* Cuenta Regresiva */
+
+/******************************************** Desktop */
+@media(min-width:983px){
+  
+.nav_contract{
+  height:100px !important;
+}
+
+.nav_normal{
+  height: 140px !important;
+}
+
+.nav_container{
+  height: 142px;
+}
+}
+
+/******************************************** Mobile */
+@media (max-width:984px) {
+  .nav_container {
+
+    /* justify-content */
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    flex-direction: column;
+
+    /* align-items */
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    /* Propios */
+    width: 100%;
+    padding: 0;
+    transition: 0.2s;
+  }
+
+  .nav_contract{
+    height:140px !important;
+  }
+
+  .nav_normal{
+    height: 175.5px !important;
+  }
+
+  
+
+  .bars_icon{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    position:absolute;
+    left:19px;
+    font-size: 26px;
+    top:10px;
+    }
+
+    .nav_logo_container{
+      padding-top: 30.9px;
+    }
+
+    nav{
+      display: none;  
+      }
+
+  .ntexto{
+    margin-top:0px;
+  }  
+}
+
+

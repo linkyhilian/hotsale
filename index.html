@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Hot Weeks | Distrito Moda</title>
+  <link rel="shortcut icon" href="img/others/favicon.webp" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <script defer src="vendor/fontawesome-free-5.13.0-web/js/all.js"></script>
+
+  <!-- css propios -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/simple-sidebar.css">
+  <link rel="stylesheet" href="css/modal.css">
+  
+
+</head>
+
+<body>
+
+  <header id="navbar">
+    <div id="nav_container" class="nav_container">
+
+      <div class="bars_icon" onclick="sidebarToggle()"><i class="fas fa-bars"></i></div>
+
+    
+
+
+      <div id="nav_logo_container" class="nav_logo_container"><img class="logo_img" src="img/others/Logo_blanco.png" alt="Distrito Moda Logo"></div>
+
+      <nav>
+        <ul>
+          <li class="item">
+            <a data-scroll href="#ofertas">HotSale</a>
+          </li>
+          <li class="item">
+            <a data-scroll href="#juego">Juega</a>
+          </li>
+          <li class="item">
+            <a data-scroll href="#tiendas">Tiendas</a>
+          </li>
+          <li class="item">
+            <a data-scroll href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container_cuentas">
+
+        <div class="container_ncuenta">
+          <div class="ntexto">
+            Termina en
+          </div>
+          <div id="cuenta">
+          </div>
+        </div>
+
+      </div>
+      <div class="overlay"></div>
+    </div>
+
+    <section class="nav-sidebar ">
+      <div class="menu_side_background"></div>
+      <div class="menu_side">
+        <div class="sidebar_header">
+          <div class="icon_arrow" onclick="sidebarToggle()"> 
+            <img src="img/others/arro2.png" class="arrow" alt="">  
+        </div> 
+        <div class="icon_arrow"> 
+          <img src="img/others/Logo_color.png" class="sidebar_img" alt=""> 
+        </div>
+        </div>
+        <div class="sidebar_item " onclick="sidebarToggle()"><a data-scroll href="#ofertas">Hotsale</a></div>
+        <div class="sidebar_item " onclick="sidebarToggle()" id="open_modal_menu" ><a data-scroll >Jugar</a></div>
+        <div class="sidebar_item " onclick="sidebarToggle()"><a data-scroll href="#tiendas">Tiendas</a></div>
+        <div class="sidebar_item " onclick="sidebarToggle()"><a data-scroll href="#contacto">Contacto</a></div>
+      </div>
+    </section>
+  
+  </header>
+
+
+  <!-- Contenedor de Sidebar -->
+
+  <!-- Contenedor de ofertas -->
+  <section id="ofertas" class="offers">
+    <div class="container_main">
+      <div class="container_offer">
+        <div class="offer_head">
+          <img src="img/offerts/ht.png" alt="HotWeek">
+        
+          <div class="container_subtitle">
+
+            <h1 class="subtitle">
+              Llega el HotWeek en <strong> Distrito Moda!!! </strong>
+            </h1>
+            <h2 class="subtitle">
+              11, 12 y 13 de Mayo
+            </h2>
+
+          </div>
+        </div>
+
+        <div class="offer_footer">
+
+          <!-- Contenedor del Modal -->
+          <div class="boton_modal">
+            <img id="open_modal" src="img/games/boton.jpg" alt="">
+          </div>
+          <div id="modal" class="modal">
+            <div class="flex" id="flex">
+              <div class="contenido-modal">
+                <div class="modal-header flex">
+                  <span class="close" id="close"><i class="fas fa-times-circle"></i></span>
+                </div>
+                <div class="modal-body">
+                  <h2 class="title_modal">¡Probá tu <span> SUERTE! </span></h2>
+                  <div class="game_action">
+                    <!-- <img src="img/games/ruleta.png" alt=""> -->
+                     <!-- Ruleta -->
+                     <canvas id="canvas2" height="248" width="248" ></canvas>
+                      <!-- Mensaje -->
+                      <div class="message_result"></div>
+                      <!-- Fin de Mensaje -->
+                    <!-- Fin Ruleta -->
+                    <!-- Mensaje de error -->
+                    <div class="modal_container_action">
+                      <h2 class="modal_texto">UPS</h2>
+                      <div class="modal_texto container_p">
+                        <span>Ya agotaste</span>
+                        <span>tu chance de hoy,</span>
+                        <span>intentá mañana</span>
+                      </div>
+                    </div>
+                    <!-- Fin Mensaje de error -->
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Contenedor del Modal -->
+
+          <div><img src="img/offerts/BT1.png" alt="Descuentos"></div>
+          <div><img src="img/offerts/BT2.png" alt="Envios Gratis"></div>
+          <div><img src="img/offerts/BT3.png" alt="Envios Todo En 1"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contenedor de ofertas -->
+
+  <!-- Contenedor de juego -->
+  <section class="game">
+    <div class="container_main">
+      <div class="container_game">
+        <div class="game_info">
+          <div class="info">
+            <h2 id="juego"  class="title h1_size">
+              ¡Probá tu <span> SUERTE! </span>
+            </h2>
+            <div class="text">
+              <h3 class="text">
+                Dale vuelta a la ruleta y consiguí
+              </h3>
+              <h3>uno de nuestros premios</h3>
+              <span class="text text_info">*Para jugar dejanos tu nombre y tu email.</span>
+              <br>
+              <span class="text text_info">*Podés jugar solo una vez.</span>
+              <br>
+              <span class="text text_info">*Si ganás, tendra 15 minutos para reclamar tu premio.</span>
+            </div>
+            <div class="form">
+              <form name="form" method="POST" autocomplete="on" onsubmit="return send();">
+                <!-- Metodo get temporal, solo para efectos de prueba -->
+                <label for="name" class="text_label" >Nombre </label>
+                  <input type="text" id="name" name="name" class="container_text text" placeholder="Ingrese el nombre" required minlength="3" maxlength="40">
+                  <p id="name_message"></p>
+                <label for="email" class="text_label" >Email </label>
+                  <input type="email" id="email" name="email" class="container_text text" placeholder="Introduzca el correo electrónico" required minlength="6" maxlength="40" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}">
+                  <p id="email_message"></p>
+                <label class="susc_label text">
+                  <input type="checkbox" name="checkbox" id="susc" value="0"> <span>Deseo suscribirme al Newletter DM</span> </label><br>
+                <label for="date" class="text_label date_label" >Fecha</label>
+                  <input type="text" id="date" name="date" class="container_text text" >
+                <input type="submit" id="test" class="action_play" value="Jugá y Ganá"> 
+                  <p id="resp"> </p>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="game_action">
+          <!-- <img src="img/games/ruleta.png" alt=""> -->
+           <!-- Ruleta -->
+           <canvas id="canvas" height="400" width="400" ></canvas>
+           <!-- Mensaje -->
+           <div class="message_result"></div>
+           <!-- Fin de Mensaje -->
+         <!-- Fin Ruleta --> 
+         <!-- Mensaje de error -->
+         <div class="modal_container_action">
+          <div class="modal_texto container_p">
+            <h2 class="modal_texto">UPS</h1>
+            <span>Ya agotaste</span>
+            <span>tu chance de hoy,</span>
+            <span>intentá mañana</span>
+          </div>
+        </div>
+        <!-- Fin Mensaje de error -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contenedor de juego -->
+
+  <!-- Contenedor de tiendas -->
+  <section id="tiendas" class="shops">
+    <div class="container_main">
+      <div class="container_shop">
+        <div class="shop_title">
+          <h3 class="style_title">Tiendas seleccionadas</h3>
+        </div>
+        <div class="shop_items">
+
+          <!-- Primero -->
+
+        <a href="https://www.distritomoda.com.ar/ohmydenim" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/oh.png">
+            <p class="item_text">Cupones de descuento $100 Envío gratis a partir $4.000 Descuento de 10%</p>
+          </div>
+        </a>
+
+        <a href="https://www.distritomoda.com.ar/dimple" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/dimple.png">
+            <p class="item_text">Cupones de descuento $100 Envío gratis a partir $4.000 Descuento de 10%</p>
+          </div>
+        </a>
+
+        <a href="https://www.distritomoda.com.ar/quinoto" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/quinoto.png">
+            <p class="item_text">Cupones de descuento $100 Envío gratis a partir $4.000</p>
+          </div>
+        </a>
+
+        <a href="https://www.distritomoda.com.ar/hephzibah" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/hep.png">
+            <p class="item_text">Cupones de descuento $100 Descuento de 10%</p>
+          </div>
+        </a>
+        
+          <!-- Primero -->
+
+          <!-- Segundo -->
+        <a href="https://www.distritomoda.com.ar/boucle" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/bou.png">
+            <p class="item_text">Cupones de descuento $100 Envío gratis a partir $4.000 Descuento de 10%</p>
+          </div>
+        </a>
+
+        <a href="https://distritomoda.com.ar/banana-shake" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/banana.png">
+            <p class="item_text">Cupones de descuento $100 Envío gratis a partir $4.000 Descuento de 10%</p>
+          </div>
+        </a>
+        
+        <a href="https://distritomoda.com.ar/" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/o.png">
+            <p class="item_text">Cupones de descuento $100 Envío gratis a partir $4.000</p>
+          </div>
+        </a>
+
+        <a href="https://distritomoda.com.ar/by-viac" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/viac.png">
+            <p class="item_text">Cupones de descuento $100 Descuento de 10%</p>
+          </div>
+        </a>
+          <!-- Segundo -->
+
+          <!-- Tercero -->
+
+        <a href="https://www.distritomoda.com.ar/ohmydenim" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/oh.png">
+            <p class="item_text">Cupones de descuento $100 Envío gratis a partir $4.000 Descuento de 10%</p>
+          </div>
+        </a>
+
+        <a href="https://www.distritomoda.com.ar/dimple" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/dimple.png">
+            <p class="item_text">Cupones de descuento $100 Envío gratis a partir $4.000 Descuento de 10%</p>
+          </div>
+        </a>
+
+        <a href="https://www.distritomoda.com.ar/quinoto" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/quinoto.png">
+            <p class="item_text">Cupones de descuento $100 Envío gratis a partir $4.000</p>
+          </div>
+        </a>
+
+        <a href="https://www.distritomoda.com.ar/hephzibah" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/hep.png">
+            <p class="item_text">Cupones de descuento $100 Descuento de 10%</p>
+          </div>
+        </a>
+        
+          <!-- Tercero -->
+
+          <!-- Cuarto -->
+        <a href="https://www.distritomoda.com.ar/boucle" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/bou.png">
+            <p class="item_text">Cupones de descuento $100 Envío gratis a partir $4.000 Descuento de 10%</p>
+          </div>
+        </a>
+
+        <a href="https://distritomoda.com.ar/banana-shake" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/banana.png">
+            <p class="item_text">Cupones de descuento $100 Envío gratis a partir $4.000 Descuento de 10%</p>
+          </div>
+        </a>
+        
+        <a href="https://distritomoda.com.ar/" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/o.png">
+            <p class="item_text">Cupones de descuento $100 Envío gratis a partir $4.000</p>
+          </div>
+        </a>
+
+        <a href="https://distritomoda.com.ar/by-viac" class="shop_link">
+          <div class="shop">
+            <img src="img/shops/viac.png">
+            <p class="item_text">Cupones de descuento $100 Descuento de 10%</p>
+          </div>
+        </a>
+
+          <!-- Cuarto -->
+
+        </div>
+        <div class="shop_button">
+          <button class="submit">Ver más</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contenedor de tiendas -->
+
+  <footer id="contacto">
+    <div class="container_main">
+      <div class="container_footer">
+        <div class="social_networks">
+          <span class="text_footer text_s">Seguinos</span>
+          <div class="icon">
+            <a href="https://www.instagram.com/distritomodaarg/">  <img src="img/social/IG.png"  alt="Instagram Distrito Moda"> </a>
+           
+            <a href="https://www.facebook.com/distritomodaarg/"> <img  src="img/social/Facebook.png"  alt="Facebook Distrito Moda"> </a>
+
+            <a href="https://www.youtube.com/channel/UCUSVZN5Wp3iZhZL2PLsTDfA"> <img  src="img/social/Youtube.png"  alt="Youtube Distrito Moda"> </a>
+            
+            <a href="https://distritoblog.com.ar/"> <img src="img/social/Blog.png"  alt="Blog Distrito Moda"> </a>
+            
+            <a href=""> <img href="" src="img/social/Whatsapp.png"  alt="Whatsapp Distrito Moda"> </a> <!--------------------------------------------------Falta-->
+          </div>
+        </div>
+        <div class="reserved_container">
+          <div class="reserved">
+            <span class="text_footer text_r">© 2017-2020 distritomoda   Todos los Derechos reservados.</span>
+          </div>
+        </div>
+        <div class="logo_container">
+          <img src="img/others/Logo_blanco.png" class="logo" alt="Distrito Moda">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- jQuery Custom Scroller -->
+  <script src="vendor/js/jquery-3.4.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  <!-- jQuery Custom Scroller -->
+
+  <!-- Scroll -->
+  <script src="vendor/js/smooth-scroll.min.js"></script>
+  <script src="js/smooth.js"></script>
+  <!-- Scroll -->
+
+  <!-- Countdown -->
+  <script src="vendor/js/simplyCountdown.min.js"></script>
+  <script src="js/countdown.js"></script>
+  <!-- Countdown -->
+
+  <!-- Juego -->
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/winwheel.js"></script>
+  <script src="js/customWheel.js"></script>
+  <script src="js/sendForm.js"></script>
+
+  <!-- Otros -->
+  <script src="js/index.js"></script>
+  <script src="js/navbar.js"></script>
+  <script src="js/modal.js"></script>
+  
+  <!-- Otros-->
+  <!-- Juego -->
+
+</body>
+
+</html>
